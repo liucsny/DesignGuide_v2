@@ -3,7 +3,7 @@
     <nav-bar></nav-bar>
     <div class="container flex-container">
       <side-bar></side-bar>
-      <transition mode="out-in">  
+      <transition name="page">  
         <router-view/>
       </transition>
     </div>
@@ -24,6 +24,20 @@ export default {
 </script>
 
 <style>
+.page-enter{
+  opacity: 0;
+  transform: translate(0,-10px);
+}
+.page-enter-active{
+  transition: opacity .5s,transform .5s;
+}
+/*.page-leave{
+}
+.page-leave-active{
+  opacity: 0;
+  transition: opacity 1s;
+}*/
+
 body{
   margin: 0;
   background-color: #fafafa;
