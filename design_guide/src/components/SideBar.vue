@@ -1,8 +1,8 @@
 <template>
 	<div id="sidebar">
 		<ul class="mainList">
-			<li>Datamap设计规范</li>
-			<li>VI规范</li>
+			<router-link tag="li" active-class="active" to="/" exact>Datamap设计规范</router-link>
+			<router-link tag="li" active-class="active" to="/vi">VI规范</router-link>
 			<li>界面设计规范</li>
 			<ul class="subList">
 				<li>界面布局</li>
@@ -10,21 +10,32 @@
 				<li>组件</li>
 			</ul>
 		</ul>
+		<!-- <button @click="showRouter">para</button> -->
 	</div>
 </template>
 
 <script>
 export default{
+	data:function(){
+		return{
+			id: this.$route.params.id,
+		}
+	},
 	created:function(){
 		window.addEventListener('scroll', function(){
 			let mainList = document.getElementsByClassName('mainList')[0];
-			console.log(pageYOffset + 'px');
+			// console.log(pageYOffset + 'px');
 			if (pageYOffset>80 && !mainList.classList.contains("fixedMainList")) {
 				mainList.classList.add("fixedMainList");
 			} else if(pageYOffset <= 80 && mainList.classList.contains("fixedMainList")) {
 				mainList.classList.remove("fixedMainList");
 			}
 		})
+	},
+	methods:{
+		// showRouter:function() {
+		// 	console.log(this.$route.params);
+		// }
 	}
 }
 </script>
@@ -37,7 +48,7 @@ export default{
 
 .fixedMainList{
 	position: fixed;
-	margin-top: -60px;
+	margin-top: -66px;
 }
 
 .subList>li{
@@ -55,6 +66,9 @@ li{
 }
 li:hover{
 	cursor: pointer;
+	color:#507eff;
+}
+.active{
 	color:#507eff;
 }
 

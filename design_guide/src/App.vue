@@ -3,7 +3,9 @@
     <nav-bar></nav-bar>
     <div class="container flex-container">
       <side-bar></side-bar>
-      <router-view/>
+      <transition mode="out-in">  
+        <router-view/>
+      </transition>
     </div>
   </div>
 </template>
