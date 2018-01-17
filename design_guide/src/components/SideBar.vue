@@ -2,11 +2,11 @@
 	<div id="sidebar">
 		<ul class="mainList">
 			<router-link tag="li" active-class="active" to="/" exact>Datamap设计规范</router-link>
-			<router-link tag="li" active-class="active" to="/vi">VI规范</router-link>
+			<router-link tag="li" active-class="active" to="/vi" exact>VI规范</router-link>
 			<li>界面设计规范</li>
 			<ul class="subList">
 				<li>界面布局</li>
-				<li>色彩使用</li>
+				<router-link tag="li" active-class="active" to="/Color" exact>色彩使用</router-link>
 				<li>组件</li>
 			</ul>
 		</ul>
