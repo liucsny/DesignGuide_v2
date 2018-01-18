@@ -1,10 +1,10 @@
 <template>
 	<div id="sidebar">
-		<ul class="mainList">
+		<ul class="examplemainList">
 			<router-link tag="li" active-class="active" to="/" exact>Datamap设计规范</router-link>
 			<router-link tag="li" active-class="active" to="/vi" exact>VI规范</router-link>
 			<li>界面设计规范</li>
-			<ul class="subList">
+			<ul class="examplesubList">
 				<li>界面布局</li>
 				<router-link tag="li" active-class="active" to="/Color" exact>色彩使用</router-link>
 				<li>组件</li>
@@ -41,46 +41,5 @@ export default{
 </script>
 
 <style scoped>
-.mainList{
-	font-family: "Avenir";
-	margin-left: 0;
-	padding-left: 0;
-}
-
-.fixedMainList{
-	position: fixed;
-	margin-top: -66px;
-}
-
-.subList{
-	margin-left: -10px;
-}
-
-.subList>li{
-	font-weight: 400;
-	color:#7F7F7F;
-}
-
-li{
-	font-weight: 600;
-	color:#7F7F7F;
-	margin-left: 0;
-	list-style-type: none;
-	text-align: left;
-	padding: 8px 0;
-}
-li:hover{
-	cursor: pointer;
-	color:#507eff;
-}
-
-.active{
-	color:#507eff;
-}
-
-#sidebar{
-	padding-top: 6px;
-	width: 220px;
-	/*background-color: #66FFFF;*/
-}
+@import url("../style/style.css");
 </style>
