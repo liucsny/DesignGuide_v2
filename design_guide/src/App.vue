@@ -1,41 +1,30 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
-    <div class="container flex-container">
-      <side-bar></side-bar>
-      <transition name="page" mode="out-in" appear>  
-        <router-view/>
-      </transition>
-    </div>
+    <transition name="page" mode="out-in" appear>
+      <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import SideBar from "@/components/SideBar.vue"
-
 export default {
   name: 'app',
-  components:{
-    "nav-bar":NavBar,
-    "side-bar":SideBar
-  }
 }
 </script>
 
 <style>
 .page-enter{
   opacity: 0;
-  transform: translate(0,-10px);
+  transform: translate(0,-5px);
 }
 .page-enter-active{
-  transition: opacity .5s,transform .5s;
+  transition: opacity .3s,transform .3s;
 }
 .page-leave{
 }
 .page-leave-active{
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity .2s;
 }
 
 body{
@@ -56,7 +45,7 @@ body{
   .container{
     max-width: 1000px;
     margin: 0 auto;
-  } 
+  }
   .pageContainer{
     max-width: 760px;
     margin: 0 auto;
@@ -94,6 +83,8 @@ p{
 
 a{
   text-decoration: none;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 600;
   color:#507eff;
 }
 a:hover{
