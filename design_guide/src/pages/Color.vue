@@ -7,10 +7,10 @@
 			<h2>深蓝色系</h2>
       <div class="background">
         <div class="card" v-for="n in 4">
-					<p class="title">卡片示例 - {{n}}</p>
-					<div class="chart">
+					<p class="title">图表示例 - {{n}}</p>
+					<svg class="chart">
 
-					</div>
+					</svg>
         </div>
       </div>
 				<!-- <p><router-link tag="a" active-class="active" to="/Example" exact>示例</router-link></p> -->
@@ -20,7 +20,9 @@
 
 <script>
 export default{
+	created:function(){
 
+	}
 }
 </script>
 
@@ -31,6 +33,7 @@ export default{
     padding: 60px 40px;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content:space-evenly;
 }
 
 .card{
