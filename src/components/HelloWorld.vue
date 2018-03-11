@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur id ut sapiente molestias perferendis voluptatibus, nulla, expedita nobis dolores assumenda ex et repellendus recusandae fuga, aspernatur hic eos inventore excepturi!</p>
   </div>
 </template>
 
@@ -30,4 +31,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
